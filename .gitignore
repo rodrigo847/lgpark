@@ -1,0 +1,17 @@
+# Documentos administrativos: nao publicar nem versionar.
+/dados/
+
+# Referencias e arquivos de criacao; o site usa apenas logo e fotos extraidas.
+/img/ideia.jpeg
+/img/base preventiva.png
+/img/base servicos.png
+/projeto.md
+
+# Arquivos locais.
+.DS_Store
+Thumbs.db
+Desktop.ini
+.env
+.env.*
+node_modules/
+*.log
