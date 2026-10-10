@@ -14,6 +14,9 @@ Abra `index.html` no navegador ou use a extensão Live Server do VS Code. Os cam
    - `index.html`
    - `styles.css`
    - `script.js`
+   - `robots.txt`
+   - `sitemap.xml`
+   - `llms.txt`
    - `img/LOGO.png`
    - `img/oficina.jpg`
    - `img/pneus.jpg`
@@ -61,3 +64,24 @@ Confira os arquivos em `git status` antes de fazer o commit. Nunca inclua creden
 - `img/`: logotipo e fotos.
 
 Ao alterar o WhatsApp, atualize o endereço `action` do formulário e todos os links `wa.me` no HTML. A lógica do formulário utiliza esse mesmo `action`. Atualize também o telefone nos dados estruturados.
+
+## Descoberta no Google e em ferramentas de IA
+
+O site inclui descrição, URL canônica, dados estruturados `AutomotiveBusiness` com catálogo de serviços, conteúdo textual e perguntas frequentes acessíveis sem JavaScript. `robots.txt` permite rastreamento geral e informa o sitemap, que lista apenas a página real, sem tratar âncoras como páginas separadas.
+
+`llms.txt` é um resumo complementar em Markdown, com fontes oficiais e informações confirmadas. É uma proposta com suporte variável: não garante leitura por IAs, não é requisito do Google e não substitui conteúdo HTML, indexação ou dados estruturados. A permissão geral de rastreamento também não obriga robôs a visitar o site ou incluir seu conteúdo.
+
+### Após publicar os arquivos atualizados
+
+1. Confira que `/robots.txt`, `/sitemap.xml` e `/llms.txt` abrem no domínio com resposta HTTP 200, sem página de erro. `sitemap.xml` deve conter XML, e os arquivos `.txt`, texto.
+2. Mantenha a versão canônica `https://www.lgpark.com.br/`. Na Hostinger, configure redirecionamento permanente (301 ou 308) de `https://lgpark.com.br/` para a versão com `www`, preservando os caminhos. Evite regras nos dois sentidos. Se escolher a versão sem `www`, atualize primeiro as URLs no HTML, sitemap, robots e llms.
+3. Acesse [Google Search Console](https://search.google.com/search-console), adicione a propriedade de domínio `lgpark.com.br` e faça a verificação usando o registro TXT de DNS fornecido pelo Google. Não substitua registros existentes de site ou e-mail.
+4. Na área Sitemaps do Search Console, envie `https://www.lgpark.com.br/sitemap.xml`.
+5. Use Inspeção de URL para testar `https://www.lgpark.com.br/` e solicitar indexação. A solicitação não garante inclusão nem prazo.
+6. Crie ou reivindique o [Perfil da Empresa no Google](https://www.google.com/business/) e conclua a verificação solicitada. Use o mesmo nome, endereço, telefone e site. Informe horários reais, serviços confirmados e fotos próprias. Não crie uma ficha duplicada se já existir.
+7. Confira o JSON-LD no [Schema Markup Validator](https://validator.schema.org/) e a elegibilidade no [Teste de resultados avançados](https://search.google.com/test/rich-results). Marcação válida não garante exibição especial.
+8. Acompanhe a indexação e os termos de pesquisa no Search Console. Confira também se as regras de proteção da Hostinger/CDN não estão bloqueando rastreadores legítimos.
+
+Não há garantia de posição, tráfego ou citação por ferramentas de IA. Segundo a [documentação oficial do Google](https://developers.google.com/search/docs/appearance/ai-features), os recursos de IA da Busca usam os mesmos fundamentos de SEO, sem exigir arquivos especiais para IA.
+
+Mantenha o HTML, os dados estruturados, `llms.txt` e o Perfil da Empresa consistentes ao atualizar serviços, endereço ou telefone. Não publique horários, avaliações, preços ou coordenadas sem confirmação.

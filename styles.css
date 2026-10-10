@@ -141,6 +141,12 @@ address { font-style: normal; font-size: 17px; font-weight: 600; line-height: 1.
 .location-card-footer strong { display: block; font-size: 15px; }
 .location-card-footer small { color: var(--muted); font-size: 12px; }
 .site-footer { background: var(--paper); border-top: 1px solid var(--line); }
+.faq-section { background: var(--paper); }
+.faq-list { max-width: 850px; }
+.faq-list details { border-bottom: 1px solid var(--line); padding-block: 18px; }
+.faq-list summary { cursor: pointer; font-weight: 650; padding-right: 12px; }
+.faq-list p { margin: 15px 0 0; color: var(--muted); font-size: 15px; }
+.faq-list a { text-decoration: underline; text-underline-offset: 3px; }
 .footer-main { display: flex; justify-content: space-between; align-items: center; gap: 25px; padding-block: 38px; }
 .footer-brand img { width: 55px; height: 50px; }
 .footer-brand > span { font-size: 13px; font-weight: 650; }

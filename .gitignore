@@ -15,3 +15,5 @@ Desktop.ini
 .env.*
 node_modules/
 *.log
+/lgpark-main.zip
+/lgpark-main/
